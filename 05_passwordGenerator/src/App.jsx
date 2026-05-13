@@ -110,7 +110,7 @@ export default function App() {
 
           <button
             onClick={passwordGenerator}
-            className="w-full bg-gradient-to- from-blue-600 to-indigo-600 hover:scale-[1.02] transition-all text-white font-semibold py-4 rounded-2xl shadow-lg"
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:scale-[1.02] transition-all text-white font-semibold py-4 rounded-2xl shadow-lg"
           >
             Generate Password
           </button>
