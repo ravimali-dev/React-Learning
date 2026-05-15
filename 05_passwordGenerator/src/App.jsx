@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 
 export default function App() {
   const [password, setPassword] = useState('')
@@ -8,7 +8,8 @@ export default function App() {
 
   const passwordRef = useRef(null)
 
-  function passwordGenerator() {
+  const passwordGenerator = useCallback(() => {
+    // tera saara password wala code yahan
     let pass = ''
     let str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 
@@ -26,11 +27,13 @@ export default function App() {
     }
 
     setPassword(pass)
-  }
+  
+}, [length, numberAllowed, charAllowed])
 
+  
   useEffect(() => {
     passwordGenerator()
-  }, [length, numberAllowed, charAllowed])
+  }, [length, numberAllowed, charAllowed, passwordGenerator])
 
   function copyPassword() {
     passwordRef.current.select()
