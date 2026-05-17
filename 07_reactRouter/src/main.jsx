@@ -41,9 +41,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
       <Route path='' element={<Home />} />
-      <Route path='about' element={<About />}>
-        <Route path='ravi' element={<h1>Ravi Pages here</h1>} />
-      </Route>
+      <Route path='about' element={<About />}/>
       <Route path='contact' element={<Contact />} />
       <Route path='user/:userid' element={<User />} />
       <Route 

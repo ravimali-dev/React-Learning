@@ -26,7 +26,7 @@ export default function About() {
                             Nobis minus voluptatibus pariatur dignissimos libero.
                         </p>
 
-                        <Outlet />
+                        
 
                     </div>
                 </div>
