@@ -1,13 +1,13 @@
 import React from 'react'
-import { UserContext } from '../Context/UserContext'
-import { useContext } from 'react'
+
+import { useLogin } from '../Context/UserContext'
 
 const Profile = () => {
-    const {user} = useContext(UserContext)
+     const { user } = useLogin()
 
   return (
     <div>
-      <h2>profile: {user}</h2>
+      <h2>{user ? user : "Guest"}</h2>
     </div>
   )
 }

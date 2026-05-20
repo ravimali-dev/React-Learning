@@ -1,10 +1,9 @@
 import React from 'react'
-import { UserContext } from '../Context/UserContext'
-import { useContext } from 'react'
+import { useLogin } from '../Context/UserContext';
+
 
 const Login = () => {
-    let {user, userLogin} = useContext(UserContext)
-
+   const { user, userLogin } = useLogin()
   return (
     <div>
       <button onClick={userLogin}>

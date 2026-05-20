@@ -1,14 +1,13 @@
-import React from 'react'
-import { UserContext } from '../Context/UserContext'
-import { useContext } from 'react'
+import { useLogin } from "../Context/UserContext"
+
 
 const Navbar = () => {
-    const {user} = useContext(UserContext)
-  return (
-    <div>
-        <h1>User:{user}</h1>
-    </div>
-  )
+
+   const { user } = useLogin()
+
+   return (
+      <h1>{user ? user : "Guest"}</h1>
+   )
 }
 
 export default Navbar
